@@ -1,0 +1,49 @@
+﻿@model TrabalhoAluno.Models.Aluno
+    
+
+@{
+    ViewData["Tilte"] = "Aluno";
+}
+
+<h1>Detalhes Aluno</h1>
+<hr/>
+
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <Label asp-for="Nome" class="control-label"></Label>
+            <input asp-for="Nome" class="form-control" readonly />
+            <span asp-validation-for="Nome" class="text-danger"></span>
+         </div>
+
+        <div class="form-group">
+            <Label asp-for="Logradouro" class="control-label"></Label>
+            <input asp-for="Logradouro" class="form-control" readonly />
+            <span asp-validation-for="Logradouro" class="text-danger"></span>
+         </div>
+
+         <div class="form-group">
+            <Label asp-for="Bairro" class="control-label"></Label>
+            <input asp-for="Bairro" class="form-control" readonly />
+            <span asp-validation-for="Bairro" class="text-danger"></span>
+         </div>
+
+         <div class="form-group">
+            <Label asp-for="Cidade" class="control-label"></Label>
+            <input asp-for="Cidade" class="form-control" readonly />
+            <span asp-validation-for="Cidade" class="text-danger"></span>
+         </div>
+
+         <div class="form-group">
+            <Label asp-for="UF" class="control-label"></Label>
+            <input asp-for="UF" class="form-control" readonly />
+            <span asp-validation-for="UF" class="text-danger"></span>
+         </div>        
+
+        <div class="form-group" style="margin-top:15px;">
+            <a class="btn btn-outline-primary btn-sm" asp-action="Edit" asp-route-id="@Model.Id">Editar</a>
+            <a class="btn btn-secondary text-white btn-sm" asp-action="Index">Voltar</a>
+        </div>
+    </div>
+</div>
